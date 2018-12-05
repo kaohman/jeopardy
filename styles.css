@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /*background-image: url('assets/space-background.jpg');*/
+  /*object-fit: cover;*/
+}
+
+.game-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+
+.round-text {
+  font-family: "Open-Sans", sans-serif;
+  text-align: center;
+}
+
+.game-board {
+  width: 1000px;
+  margin: 10px auto;
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+ul {
+  margin: 0 5px;
+  padding: 0;
+}
+
+li {
+  font-size: 28px;
+  padding-top: 20px;
+  margin: 5px 0;
+  border: 2px solid black;
+  list-style-type: none;
+  text-align: center;
+  height: 75px;
+}
+
+.scoreboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.player {
+  border: 2px solid black;
+  font-family: 'Open-Sans', sans-serif;
+  width: 400px;
+  text-align: center;
+}
+
+
+
+

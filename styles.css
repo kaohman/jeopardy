@@ -1,29 +1,120 @@
+/*BROAD STYLES*/
 * {
   box-sizing: border-box;
 }
 
 body {
-  /*background-image: url('assets/space-background.jpg');*/
-  /*object-fit: cover;*/
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+    url('assets/space-background.jpg');
+  object-fit: cover;
+}
+
+button {
+  background: linear-gradient(to bottom right, #FEA99F, #57315c);
+  border-radius: 5px;
+  border: none;
+  color: #f7f6f2;
+  filter: drop-shadow(2px 2px 3px black);
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px; 
+  padding: 10px;
+}
+
+label {
+  color: #2F1C63;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+input {
+  font-family: "Roboto", sans-serif;
+  filter: drop-shadow(2px 2px 3px black);
+  margin: 15px 5px;
+  height: 30px;
+  padding: 5px;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  color: #2F1C63;
+  font-size: 40px;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  color: #2F1C63;
+}
+
+/*POP-UP STYLES*/
+.start-pop-up,
+.clue-pop-up,
+.daily-double-pop-up,
+.final-round-pop-up,
+.winner-pop-up {
+  display: none;
+}
+
+.pop-ups {
+  position: absolute;
+  top: 0px;
+  left: 270px;
+  height: 390px;
+  z-index: 1000;
+  background: linear-gradient(to bottom right, #FEA99F, #57315c);
+  border-radius: 10px;
+  filter: drop-shadow(2px 2px 3px black);
+  margin: 150px auto 0 auto;
+  padding: 30px;
+  text-align: center;
+  width: 900px;
+}
+
+.pop-up-buttons {
+  display: block;
+  margin: 20px auto;
+}
+
+
+/*GAME PAGE*/
+.game-page {
+  display: block;
+}
+
+.restart-button {
+  margin: 0 0 0 20px;
+  position: absolute;
 }
 
 .game-title {
+  background: -webkit-linear-gradient(#f7f6f2, #FA7265 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(2px 2px 4px black);
   font-family: "Orbitron", sans-serif;
-  font-size: 50px;
+  font-size: 60px;
+  font-weight: 700;
+  margin: 25px 0 0 0;
   text-align: center;
 }
 
 .round-text {
-  font-family: "Open-Sans", sans-serif;
+  color: #f7f6f2;
+  filter: drop-shadow(2px 2px 4px black);
+  font-family: "Orbitron", sans-serif;
+  font-size: 35px;
+  font-weight: 400;
+  margin: 5px 0;
   text-align: center;
 }
 
 .game-board {
-  width: 1000px;
-  margin: 10px auto;
-  font-family: "Roboto", sans-serif;
   display: grid;
+  font-family: "Roboto", sans-serif;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0 auto;
+  width: 900px;
 }
 
 ul {
@@ -32,26 +123,51 @@ ul {
 }
 
 li {
+  background: linear-gradient(to bottom right, #FEA99F, #A3646E);
+  border-radius: 5px;
+  color: white;
+  filter: drop-shadow(2px 2px 3px black);
   font-size: 28px;
-  padding-top: 20px;
-  margin: 5px 0;
-  border: 2px solid black;
+  height: 70px;
   list-style-type: none;
+  margin: 8px 0;
+  padding-top: 18px;
   text-align: center;
-  height: 75px;
+}
+
+.categories {
+  color: #2F1C63;
 }
 
 .scoreboard {
+  background-color: rgb(34, 35, 66, 0.7);
+  border-radius: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
+  margin: 10px auto 15px auto;
+  padding: 20px;
+  width: 1000px;
 }
 
 .player {
-  border: 2px solid black;
-  font-family: 'Open-Sans', sans-serif;
-  width: 400px;
+  background: linear-gradient(to bottom right, #FEA99F, #57315c);
+  border-radius: 20px;
+  filter: drop-shadow(2px 2px 3px black);
+  font-family: "Roboto", sans-serif;
   text-align: center;
+  width: 250px;
+}
+
+.player-names {
+  color: #2F1C63;
+  margin: 15px 0 0 0;
+}
+
+h3 {
+  color: lightgrey;
+  font-size: 30px;
+  margin: 0 0 5px 0;
 }
 
 

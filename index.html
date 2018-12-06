@@ -2,102 +2,115 @@
 <html>
   <head>
     <title>Space Jeopardy!</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Orbitron|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Orbitron:400,700|Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="normalize.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <!-- <section class="pop-ups start-pop-up">
-      <h1>SPACE JEOPARDY!</h1>
-      <label class="player-name-labels" for="player-1-name">Player 1</label>
-      <input class="player-name-inputs" type="text" name="player-1-name" id="player-1-name" placeholder="Enter Name">
-      <label class="player-name-labels" for="player-1-name">Player 2</label>
-      <input class="player-name-inputs" type="text" name="player2-name" id="player-2-name" placeholder="Enter Name">
-      <label class="player-name-labels" for="player-3-name">Player 3</label>
-      <input class="player-name-inputs" type="text" name="player-3-name" id="player-3-name" placeholder="Enter Name">
-      <button class="start-button">START GAME</button>
-    </section> -->
-    <nav>
-      <button class="restart-button">RESTART GAME</button>
-    </nav>
-    <header>
+    <section class="pop-ups start-pop-up">
       <h1 class="game-title">SPACE JEOPARDY!</h1>
-      <h2 class="round-text">Round 1</h2>
-    </header>
-    <section class="game-board">
-      <ul class="category-1-list">
-        <li class="categories category-1">Category 1</li>
-        <li>100</li>
-        <li>200</li>
-        <li>300</li>
-        <li>400</li>
-      </ul>
-      <ul class="category-2-list">
-        <li class="categories category-2">Category 2</li>
-        <li>100</li>
-        <li>200</li>
-        <li>300</li>
-        <li>400</li>
-      </ul>
-      <ul class="category-3-list">
-        <li class="categories category-3">Category 3</li>
-        <li>100</li>
-        <li>200</li>
-        <li>300</li>
-        <li>400</li>
-      </ul>
-      <ul class="category-4-list">
-        <li class="categories category-4">Category 4</li>
-        <li>100</li>
-        <li>200</li>
-        <li>300</li>
-        <li>400</li>
-      </ul>
+      <div>
+        <label class="player-name-labels" for="player-1-name">PLAYER 1:</label>
+        <input class="player-name-inputs" type="text" name="player-1-name" id="player-1-name" placeholder="Enter Name">
+      </div>
+      <div>
+        <label class="player-name-labels" for="player-1-name">PLAYER 2:</label>
+        <input class="player-name-inputs" type="text" name="player2-name" id="player-2-name" placeholder="Enter Name">
+      </div>
+      <div>
+        <label class="player-name-labels" for="player-3-name">PLAYER 3:</label>
+        <input class="player-name-inputs" type="text" name="player-3-name" id="player-3-name" placeholder="Enter Name">
+      </div>
+      <button class="pop-up-buttons start-button">START GAME</button>
     </section>
-    <section class="scoreboard">
-      <div class="player player-1-div">
-        <h2 class="player-1-name">Player 1 Name</h2>
-        <h3 class="player-1-score">0</h3>
-      </div>
-      <div class="player player-2-div">
-        <h2 class="player-2-name">Player 2 Name</h2>
-        <h3 class="player-2-score">0</h3>
-      </div>
-      <div class="player player-3-div">
-        <h2 class="player-3-name">Player 3 Name</h2>
-        <h3 class="player-3-score">0</h3>
-      </div>
+    <section class="game-page">
+      <nav>
+        <button class="restart-button">RESTART GAME</button>
+      </nav>
+      <header>
+        <h1 class="game-title">SPACE JEOPARDY!</h1>
+        <h2 class="round-text">ROUND 1</h2>
+      </header>
+      <section class="game-board">
+        <ul class="category-1-list">
+          <li class="categories category-1">CATEGORY 1</li>
+          <li class="clue-box" data-id="cat1-val1">100</li>
+          <li class="clue-box" data-id="cat1-val2">200</li>
+          <li class="clue-box" data-id="cat1-val3">300</li>
+          <li class="clue-box" data-id="cat1-val4">400</li>
+        </ul>
+        <ul class="category-2-list">
+          <li class="categories category-2">CATEGORY 2</li>
+          <li class="clue-box" data-id="cat2-val1">100</li>
+          <li class="clue-box" data-id="cat2-val2">200</li>
+          <li class="clue-box" data-id="cat2-val3">300</li>
+          <li class="clue-box" data-id="cat2-val4">400</li>
+        </ul>
+        <ul class="category-3-list">
+          <li class="categories category-3">CATEGORY 3</li>
+          <li class="clue-box" data-id="cat3-val1">100</li>
+          <li class="clue-box" data-id="cat3-val2">200</li>
+          <li class="clue-box" data-id="cat3-val3">300</li>
+          <li class="clue-box" data-id="cat3-val4">400</li>
+        </ul>
+        <ul class="category-4-list">
+          <li class="categories category-4">CATEGORY 4</li>
+          <li class="clue-box" data-id="cat4-val1">100</li>
+          <li class="clue-box" data-id="cat4-val2">200</li>
+          <li class="clue-box" data-id="cat4-val3">300</li>
+          <li class="clue-box" data-id="cat4-val4">400</li>
+        </ul>
+      </section>
+      <section class="scoreboard">
+        <div class="player player-1-div">
+          <h2 class="player-names player-1-name">Player 1 Name</h2>
+          <h3 class="player-1-score">0</h3>
+        </div>
+        <div class="player player-2-div">
+          <h2 class="player-names player-2-name">Player 2 Name</h2>
+          <h3 class="player-2-score">0</h3>
+        </div>
+        <div class="player player-3-div">
+          <h2 class="player-names player-3-name">Player 3 Name</h2>
+          <h3 class="player-3-score">0</h3>
+        </div>
+      </section>
     </section>
-    <!-- wager pop-up final jeopardy -->
-    <!-- <section class="pop-ups clue-pop-up">
+    <section class="pop-ups clue-pop-up">
       <h1 class="clue-text">CLUE TEXT</h1>
       <h2 class="answer-message-text">CORRECT!</h2>
-      <label class="answer-label" for="answer-input">ANSWER</label>
+      <label class="answer-label" for="answer-input">ANSWER:</label>
       <input class="answer-text-input" type="text" name="answer-input" id="answer-input">
-      <button class="submit-answer-button">SUBMIT ANSWER</button>
+      <button class="pop-up-buttons submit-answer-button">SUBMIT ANSWER</button>
     </section>
     <section class="pop-ups daily-double-pop-up">
       <h1>DAILY DOUBLE!</h1>
-      <label class="wager-label" for="wager-input">WAGER</label>
+      <label class="wager-label" for="wager-input">WAGER:</label>
       <input class="wager-text-input" type="text" name="wager-input" id="wager-input">
-      <button class="submit-wager-button">SUBMIT WAGER</button>
+      <button class="pop-up-buttons submit-wager-button">SUBMIT WAGER</button>
     </section>
     <section class="pop-ups final-round-pop-up">
       <h1>FINAL ROUND</h1>
       <h1 class="final-round-category">CATEGORY</h1>
       <h2>SUBMIT ALL WAGERS</h2>
-      <label class="wager-label" for="wager-1-input"><span class="player-1-name-text">Player 1 Name</span> Wager</label>
-      <input class="wager-text-input" type="text" name="wager-1-input" id="wager-1-input">
-      <label class="wager-label" for="wager-2-input"><span class="player-2-name-text">Player 2 Name</span> Wager</label>
-      <input class="wager-text-input" type="text" name="wager-2-input" id="wager-2-input">
-      <label class="wager-label" for="wager-3-input"><span class="player-3-name-text">Player 3 Name</span> Wager</label>
-      <input class="wager-text-input" type="text" name="wager-3-input" id="wager-3-input">
-      <button class="submit-wager-button">SUBMIT WAGERS</button>
+      <div>
+        <label class="wager-label" for="wager-1-input"><span class="player-1-name-text">Player 1 Name</span> WAGER:</label>
+        <input class="wager-text-input" type="text" name="wager-1-input" id="wager-1-input">
+      </div>
+      <div>
+        <label class="wager-label" for="wager-2-input"><span class="player-2-name-text">Player 2 Name</span> WAGER:</label>
+        <input class="wager-text-input" type="text" name="wager-2-input" id="wager-2-input">
+      </div>
+      <div>
+        <label class="wager-label" for="wager-3-input"><span class="player-3-name-text">Player 3 Name</span> WAGER:</label>
+        <input class="wager-text-input" type="text" name="wager-3-input" id="wager-3-input">
+      </div>
+      <button class="pop-up-buttons submit-wager-button">SUBMIT WAGERS</button>
     </section>
     <section class="pop-ups winner-pop-up">
       <h1><span class="winner-name">PLAYER NAME</span> WINS!</h1>
-    </section> -->
+    </section>
     <script type="text/javascript" src="lib/domUpdates.js"></script>
     <script type="text/javascript" src="lib/Game.js"></script>
     <script type="text/javascript" src="lib/Round.js"></script>

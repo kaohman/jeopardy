@@ -1,3 +1,4 @@
+/*BROAD STYLES*/
 * {
   box-sizing: border-box;
 }
@@ -20,16 +21,11 @@ button {
   padding: 10px;
 }
 
-.pop-up-buttons {
-  display: block;
-  margin: 20px auto;
-}
-
 label {
-  vertical-align: middle;
   color: #2F1C63;
-  font-size: 24px;
   font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  vertical-align: middle;
 }
 
 input {
@@ -51,8 +47,12 @@ h2 {
   color: #2F1C63;
 }
 
-/*START POP-UP*/
-.start-pop-up {
+/*POP-UP STYLES*/
+.start-pop-up,
+.clue-pop-up,
+.daily-double-pop-up,
+.final-round-pop-up,
+.winner-pop-up {
   display: none;
 }
 
@@ -66,13 +66,11 @@ h2 {
   width: 800px;
 }
 
-.player-name-inputs {
-  font-family: "Roboto", sans-serif;
-  filter: drop-shadow(2px 2px 3px black);
-  margin: 15px 5px;
-  height: 30px;
-  padding: 5px;
+.pop-up-buttons {
+  display: block;
+  margin: 20px auto;
 }
+
 
 /*GAME PAGE*/
 .game-page {
@@ -165,26 +163,6 @@ h3 {
   color: lightgrey;
   font-size: 30px;
   margin: 0 0 5px 0;
-}
-
-/*CLUE POP-UP*/
-.clue-pop-up {
-  display: none;
-}
-
-/*DAILY DOUBLE POP UP*/
-.daily-double-pop-up {
-  display: none;
-}
-
-/*FINAL ROUND POP-UP*/
-.final-round-pop-up {
-  display: none;
-}
-
-/*WINNER POP-UP*/
-.winner-pop-up {
-  display: none;
 }
 
 

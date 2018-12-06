@@ -24,7 +24,7 @@
       </div>
       <button class="pop-up-buttons start-button">START GAME</button>
     </section>
-    <section class="game-page">
+    <section class="hidden game-page">
       <nav>
         <button class="restart-button">RESTART GAME</button>
       </nav>
@@ -77,20 +77,20 @@
         </div>
       </section>
     </section>
-    <section class="pop-ups clue-pop-up">
+    <section class="hidden pop-ups clue-pop-up">
       <h1 class="clue-text">CLUE TEXT</h1>
       <h2 class="answer-message-text">CORRECT!</h2>
       <label class="answer-label" for="answer-input">ANSWER:</label>
       <input class="answer-text-input" type="text" name="answer-input" id="answer-input">
       <button class="pop-up-buttons submit-answer-button">SUBMIT ANSWER</button>
     </section>
-    <section class="pop-ups daily-double-pop-up">
+    <section class="hidden pop-ups daily-double-pop-up">
       <h1>DAILY DOUBLE!</h1>
       <label class="wager-label" for="wager-input">WAGER:</label>
-      <input class="wager-text-input" type="text" name="wager-input" id="wager-input">
-      <button class="pop-up-buttons submit-wager-button">SUBMIT WAGER</button>
+      <input class="wager-dd-text-input" type="text" name="wager-input" id="wager-input">
+      <button class="pop-up-buttons submit-dd-wager-button">SUBMIT WAGER</button>
     </section>
-    <section class="pop-ups final-round-pop-up">
+    <section class="hidden pop-ups final-round-pop-up">
       <h1>FINAL ROUND</h1>
       <h1 class="final-round-category">CATEGORY</h1>
       <h2>SUBMIT ALL WAGERS</h2>
@@ -106,9 +106,9 @@
         <label class="wager-label" for="wager-3-input"><span class="player-3-name-text">Player 3 Name</span> WAGER:</label>
         <input class="wager-text-input" type="text" name="wager-3-input" id="wager-3-input">
       </div>
-      <button class="pop-up-buttons submit-wager-button">SUBMIT WAGERS</button>
+      <button class="pop-up-buttons submit-wagers-button">SUBMIT WAGERS</button>
     </section>
-    <section class="pop-ups winner-pop-up">
+    <section class="hidden pop-ups winner-pop-up">
       <h1><span class="winner-name">PLAYER NAME</span> WINS!</h1>
     </section>
     <script type="text/javascript" src="lib/domUpdates.js"></script>

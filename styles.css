@@ -48,13 +48,6 @@ h2 {
 }
 
 /*POP-UP STYLES*/
-.start-pop-up,
-.clue-pop-up,
-.daily-double-pop-up,
-.final-round-pop-up,
-.winner-pop-up {
-  display: none;
-}
 
 .pop-ups {
   position: absolute;
@@ -76,11 +69,12 @@ h2 {
   margin: 20px auto;
 }
 
+.hidden {
+  display: none;
+}
+
 
 /*GAME PAGE*/
-.game-page {
-  display: block;
-}
 
 .restart-button {
   margin: 0 0 0 20px;

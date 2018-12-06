@@ -57,13 +57,18 @@ h2 {
 }
 
 .pop-ups {
+  position: absolute;
+  top: 0px;
+  left: 270px;
+  height: 390px;
+  z-index: 1000;
   background: linear-gradient(to bottom right, #FEA99F, #57315c);
   border-radius: 10px;
   filter: drop-shadow(2px 2px 3px black);
   margin: 150px auto 0 auto;
   padding: 30px;
   text-align: center;
-  width: 800px;
+  width: 900px;
 }
 
 .pop-up-buttons {

@@ -131,6 +131,11 @@ li {
   text-align: center;
 }
 
+.disabled {
+  font-size: 0px;
+  background: linear-gradient(#57315c, #57315c);
+}
+
 .categories {
   display: flex;
   flex-direction: column;

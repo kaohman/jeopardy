@@ -54,7 +54,7 @@ h2 {
   top: 0px;
   left: 270px;
   height: 390px;
-  z-index: 1000;
+  /*z-index: 1000;*/
   background: linear-gradient(to bottom right, #FEA99F, #57315c);
   border-radius: 10px;
   filter: drop-shadow(2px 2px 3px black);
@@ -150,7 +150,7 @@ li {
   filter: drop-shadow(2px 2px 3px black);
   font-family: "Roboto", sans-serif;
   text-align: center;
-  width: 250px;
+  width: 250px;  
 }
 
 .player-names {
@@ -163,6 +163,46 @@ h3 {
   font-size: 30px;
   margin: 0 0 5px 0;
 }
+
+.avatar {
+  background-color: none;
+  border-radius: 50%;
+  border: 5px double white;
+/*  display: flex;*/
+  /*flex-direction: column;*/
+  /*height: 10px;*/
+  /*margin-left: -76px;*/
+  width: 40%;
+  z-index: 1;
+  /*position: absolute;*/
+}
+
+.avatar1 {
+  background-image: url('assets/alien1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.avatar2 {
+  background-image: url('assets/alien2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.avatar3 {
+  background-image: url('assets/alien3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.player-section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 75%;
+  justify-content: space-around;
+}
+
 
 
 

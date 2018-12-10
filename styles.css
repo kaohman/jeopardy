@@ -49,17 +49,28 @@ h2 {
 }
 
 /*POP-UP STYLES*/
+.pop-up-containers {
+  z-index: 999;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+}
+
+.overlay-pop-ups {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  position:absolute;
+  z-index:30;
+  width:100%;
+  height:100%;
+  bottom:0px;
+}
 
 .pop-ups {
-  position: absolute;
-  top: 0px;
-  left: 270px;
-  height: 390px;
   z-index: 1000;
   background: linear-gradient(to bottom right, #FEA99F, #57315c);
   border-radius: 10px;
   filter: drop-shadow(2px 2px 3px black);
-  margin: 150px auto 0 auto;
+  margin: 0 auto;
   padding: 30px;
   text-align: center;
   width: 900px;
@@ -129,6 +140,11 @@ li {
   margin: 8px 0;
   padding-top: 18px;
   text-align: center;
+}
+
+.disabled {
+  font-size: 0px;
+  background: linear-gradient(#57315c, #57315c);
 }
 
 .categories {

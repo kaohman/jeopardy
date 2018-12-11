@@ -1,5 +1,6 @@
 const chai = require('chai');
 const expect = chai.expect;
+const data = require('../lib/data-set.js');
 const Round = require('../lib/Round.js');
 const Game = require('../lib/Game.js');
 const spies = require('chai-spies');

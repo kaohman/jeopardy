@@ -54,7 +54,7 @@ h2 {
   top: 0px;
   left: 270px;
   height: 390px;
-  /*z-index: 1000;*/
+  z-index: 1000;
   background: linear-gradient(to bottom right, #FEA99F, #57315c);
   border-radius: 10px;
   filter: drop-shadow(2px 2px 3px black);
@@ -168,31 +168,33 @@ h3 {
   background-color: none;
   border-radius: 50%;
   border: 5px double white;
-/*  display: flex;*/
-  /*flex-direction: column;*/
-  /*height: 10px;*/
-  /*margin-left: -76px;*/
-  width: 40%;
+  margin-left: -122px;
+  width: 9%;
   z-index: 1;
-  /*position: absolute;*/
 }
 
 .avatar1 {
   background-image: url('assets/alien1.png');
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+
 }
 
 .avatar2 {
   background-image: url('assets/alien2.png');
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+
 }
 
 .avatar3 {
   background-image: url('assets/alien3.png');
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+
 }
 
 .player-section {

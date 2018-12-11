@@ -214,6 +214,11 @@ h3 {
   background-image: url('assets/alien3.png');
 }
 
+.highlight-player-avatar {
+  background-color: white;
+  border-color: white;
+}
+
 
 
 

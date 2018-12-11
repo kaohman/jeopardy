@@ -43,25 +43,36 @@ h1 {
 }
 
 h2 {
+  overflow-wrap: break-word;
   font-family: "Roboto", sans-serif;
   color: #2F1C63;
 }
 
 /*POP-UP STYLES*/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
 
 .pop-ups {
-  position: absolute;
-  top: 0px;
-  left: 270px;
-  height: 390px;
-  z-index: 1000;
   background: linear-gradient(to bottom right, #FEA99F, #57315c);
   border-radius: 10px;
   filter: drop-shadow(2px 2px 3px black);
-  margin: 150px auto 0 auto;
+  left: 50%;
+  margin-left: -450px;
+  margin-top: -200px;
   padding: 30px;
+  position: fixed;
+  position: fixed;
   text-align: center;
+  top: 50%; 
   width: 900px;
+  z-index: 11;
 }
 
 .pop-up-buttons {
@@ -79,6 +90,7 @@ h2 {
 .restart-button {
   margin: 0 0 0 20px;
   position: absolute;
+  z-index: 9;
 }
 
 .game-title {
@@ -129,8 +141,22 @@ li {
   text-align: center;
 }
 
+.disabled {
+  font-size: 0px;
+  background: linear-gradient(#57315c, #57315c);
+}
+
 .categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+.category-text {
   color: #2F1C63;
+  font-size: 24px;
+  width: 100%;
 }
 
 .scoreboard {
@@ -155,13 +181,13 @@ li {
 
 .player-names {
   color: #2F1C63;
-  margin: 15px 0 0 0;
+  margin: 10px 0 0 0;
 }
 
 h3 {
   color: lightgrey;
   font-size: 30px;
-  margin: 0 0 5px 0;
+  margin: 0 0 10px 0;
 }
 
 .avatar {

@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <div class="hidden overlay"></div>
     <section class="pop-ups start-pop-up">
       <h1 class="game-title">SPACE JEOPARDY!</h1>
       <div>
@@ -33,29 +34,29 @@
         <h2 class="round-text">ROUND 1</h2>
       </header>
       <section class="game-board">
-        <ul class="category-1-list">
-          <li class="categories category-1">CATEGORY 1</li>
+        <ul>
+          <li class="categories"><span class="category-text">CATEGORY 1</span></li>
           <li class="clue-box" data-id="0">100</li>
           <li class="clue-box" data-id="1">200</li>
           <li class="clue-box" data-id="2">300</li>
           <li class="clue-box" data-id="3">400</li>
         </ul>
-        <ul class="category-2-list">
-          <li class="categories category-2">CATEGORY 2</li>
+        <ul>
+          <li class="categories"><span class="category-text">CATEGORY 2</span></li>
           <li class="clue-box" data-id="4">100</li>
           <li class="clue-box" data-id="5">200</li>
           <li class="clue-box" data-id="6">300</li>
           <li class="clue-box" data-id="7">400</li>
         </ul>
-        <ul class="category-3-list">
-          <li class="categories category-3">CATEGORY 3</li>
+        <ul>
+          <li class="categories"><span class="category-text">CATEGORY 3</span></li>
           <li class="clue-box" data-id="8">100</li>
           <li class="clue-box" data-id="9">200</li>
           <li class="clue-box" data-id="10">300</li>
           <li class="clue-box" data-id="11">400</li>
         </ul>
-        <ul class="category-4-list">
-          <li class="categories category-4">CATEGORY 4</li>
+        <ul>
+          <li class="categories"><span class="category-text">CATEGORY 4</span></li>
           <li class="clue-box" data-id="12">100</li>
           <li class="clue-box" data-id="13">200</li>
           <li class="clue-box" data-id="14">300</li>
@@ -82,13 +83,14 @@
     </section>
     <section class="hidden pop-ups clue-pop-up">
       <h1 class="clue-text">CLUE TEXT</h1>
-      <h2 class="answer-message-text">CORRECT!</h2>
+      <h2 class="answer-message-text">PLEASE ENTER AN ANSWER</h2>
       <label class="answer-label" for="answer-input">ANSWER:</label>
       <input class="answer-text-input" type="text" name="answer-input" id="answer-input">
       <button class="pop-up-buttons submit-answer-button">SUBMIT ANSWER</button>
     </section>
     <section class="hidden pop-ups daily-double-pop-up">
       <h1>DAILY DOUBLE!</h1>
+      <h2 class="dd-wager-error-message">PLEASE ENTER A WAGER</h2>
       <label class="wager-label" for="wager-input">WAGER:</label>
       <input class="wager-dd-text-input" type="text" name="wager-input" id="wager-input">
       <button class="pop-up-buttons submit-dd-wager-button">SUBMIT WAGER</button>
@@ -117,11 +119,11 @@
     <script type="text/javascript" src="lib/data-set.js"></script>
     <script type="text/javascript" src="lib/domUpdates.js"></script>
     <script type="text/javascript" src="lib/Game.js"></script>
-    <script type="text/javascript" src="lib/Round.js"></script>
     <script type="text/javascript" src="lib/Clue.js"></script>
+    <script type="text/javascript" src="lib/Round.js"></script>
+    <script type="text/javascript" src="lib/FinalRound.js"></script>
     <script type="text/javascript" src="lib/Player.js"></script>
     <script type="text/javascript" src="lib/DailyDouble.js"></script>
-    <script src="./jquery/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="lib/index.js"></script>
   </body>
 </html>

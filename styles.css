@@ -178,7 +178,7 @@ h2 {
 .restart-button {
   margin: 0 0 0 20px;
   position: absolute;
-  z-index: 9;
+  z-index: 13;
 }
 
 .game-title {
@@ -201,6 +201,8 @@ h2 {
   font-weight: 400;
   margin: 5px 0;
   text-align: center;
+  position: relative;
+  z-index: 12;
 }
 
 .game-board {

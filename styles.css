@@ -191,7 +191,7 @@ h3 {
 }
 
 .avatar {
-  background-color: none;
+  background-color: #1C4748;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50%;
@@ -215,8 +215,8 @@ h3 {
 }
 
 .highlight-player-avatar {
-  background-color: white;
-  border-color: white;
+  background-color: #1C4748;
+  box-shadow: 2px 2px 50px #01A869;
 }
 
 

@@ -90,7 +90,7 @@ h2 {
 .restart-button {
   margin: 0 0 0 20px;
   position: absolute;
-  z-index: 9;
+  z-index: 12;
 }
 
 .game-title {

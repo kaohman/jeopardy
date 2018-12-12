@@ -53,5 +53,16 @@ describe('Game', function() {
     expect(game.playerTurn).to.equal(0);
     expect(currentPlayer).to.deep.equal({ a: 0 });
   });
+
+  it('should be able to reset the player turn', function() {
+    let players = [{ a: 0 }, { b: 1 }, { c: 2 }];
+    let currentPlayer = players[0];
+    currentPlayer = game.changePlayerTurn(players);
+    currentPlayer = game.changePlayerTurn(players);
+    currentPlayer = game.resetPlayerTurn(players);
+    expect(game.playerTurn).to.equal(0);
+    expect(currentPlayer).to.deep.equal({ a: 0 });
+  });
+
 });
 

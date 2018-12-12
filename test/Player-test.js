@@ -10,22 +10,25 @@ chai.spy.on(global.domUpdates, ['changeScoreboard'], () => true);
 describe ('Player', function() {
   var player;
   beforeEach(function() {
-    player = new Player(player1);
+    player = new Player();
   });
 
-  it('should return true', function() {
-    expect(true).to.equal(true);
+  it('should have a name', function() {
+    let player = new Player('Joe')
+    expect(player.name).to.equal('Joe');
   });
 
-  it('should increase the players score', function() {
-
-    player.increaseScore(100);
-    expect(player.increaseScore).to.equal(100);
+  it('should start with a score of 0', function() {
+    expect(player.score).to.equal(0);
   });
 
-  it('should decrease the players score', function() {
+  it('should increase the players score if correct', function() {
+    player.changeScore(100, true);
+    expect(player.score).to.equal(100);
+  });
 
-    player.decreaseScore(100);
-    expect(player.decreaseScore).to.equal(100);
-  }); 
+  it('should decrease the players score if incorrect', function() {
+    player.changeScore(100, false);
+    expect(player.score).to.equal(-100);
+  });
 });

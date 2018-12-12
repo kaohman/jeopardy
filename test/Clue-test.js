@@ -1,26 +1,34 @@
 const chai = require('chai');
 const expect = chai.expect;
-const Player = require('../Clue.js');
+const Clue = require('../lib/Clue.js');
 const spies = require('chai-spies');
 chai.use(spies);
 
-global.domUpdates = require('../domUpdates.js');
-chai.spy.on(global.domUpdates, ['validateAnswer'], () => true);
+global.Round = require('../lib/Round.js')
+global.domUpdates = require('../lib/domUpdates.js');
+chai.spy.on(global.domUpdates, ['changeDisplayedScreen'], () => true);
 
 describe ('Clue', function() {
-  var player;
+  let round;
+  let clue;
   beforeEach(function() {
+  round = new Round();
   clue = new Clue();
+  });
+
+  it('should validate a players answer', function() {
+    clue.validateAnswer('Monopoly');
+    expect(clue.answer).to.equal('Monopoly');
+  });
+
+  it('should display the current clue', function() {
+    clue.displayCurrentClue();
+    expect(domUpdates.changeDisplayedScreen).to.have.been.called(1)
+  });
+
+  // it('should display the clue for the daily double', function() {
+  //   clue.displayCurrentClue();
+  //   expect(domUpdates.changeDisplayedScreen).to.have.been.called(1)
+
+  // });
 });
-
-it('should return true', function() {
-  
-  expect(true).to.equal(true);
-});
-
-it('should check that the player guess matches the clue answer', function() {
-
-  clue.validateAnswer();
-  expect(currentClue.answer).to.equal(true);
-});
-

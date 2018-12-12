@@ -3,11 +3,6 @@ const expect = chai.expect;
 const data = require('../lib/data-set.js');
 const Round = require('../lib/Round.js');
 const Game = require('../lib/Game.js');
-const spies = require('chai-spies');
-chai.use(spies);
-
-global.domUpdates = require('../lib/domUpdates.js');
-chai.spy.on(global.domUpdates, ['displayClue', 'validateAnswer', 'getCategoryNames'], () => true);
 
 describe ('Round', function() {
   var round;
@@ -35,41 +30,57 @@ describe ('Round', function() {
     expect(round.pointValues).to.deep.equal([100, 200, 300, 400]);
   });
 
+  it('should store called indices in the property indicesCalled', function() {
+    round.addCalledIndex(1);
+    round.addCalledIndex(2);
+    round.addCalledIndex(3);
+    expect(round.indicesCalled).to.deep.equal([1, 2, 3]);
+  });
+});
+
+describe ('Round with Game', function() {
+  var round;
+  var game;
+  beforeEach(function() {
+  round = new Round(1);
+  game = new Game();
+  game.chooseCategories(data.categories);
+  round.setCategoryIds(game.categoryIds, data);
+  });
+
   it('should set 4 category IDs for the round from the given Game category IDs', function() {
-    let game = new Game();
-    let categoryIdsObj = { a: 1, b: 2, c:3, d: 4, e: 5};
-    game.chooseCategories(categoryIdsObj);
-    round.setCategoryIds(game.categoryIds);
     expect(round.categoryIds.length).to.equal(4);
   });
 
   it('should set category names for display on DOM', function() {
-    let game = new Game();
-    let categoryIdsObj = { a: 1, b: 2, c:3, d: 4, e: 5};
-    game.chooseCategories(categoryIdsObj);
-    round.setCategoryIds(game.categoryIds);
     expect(round.categoryNames.length).to.equal(4);
   });
 
   it('should get 16 clues based on category IDs', function() {
-    let game = new Game();
-    let categoryIdsObj = { a: 1, b: 2, c:3, d: 4, e: 5};
-    game.chooseCategories(categoryIdsObj);
-    round.setCategoryIds(game.categoryIds);
-    round.getClues();
+    round.getClues(data);
     expect(round.clues.length).to.equal(16);
   });
 
+  it('should update point values for Round 2', function() {
+    round.roundNum = 2;
+    round.getClues(data);
+    round.updatePointValues();
+    expect(round.clues[0].pointValue).to.equal(200);
+    expect(round.clues[1].pointValue).to.equal(400);
+    expect(round.clues[2].pointValue).to.equal(600);
+    expect(round.clues[3].pointValue).to.equal(800);
+  });
+
   it('should set some clues as Daily Doubles', function() {
-    let round = new Round(2);
-    let game = new Game();
-    let categoryIdsObj = { a: 1, b: 2, c:3, d: 4, e: 5};
-    game.chooseCategories(categoryIdsObj);
-    round.setCategoryIds(game.categoryIds);
-    round.getClues();
+    round = new Round(2);
+    round.setCategoryIds(game.categoryIds, data);
+    round.getClues(data);
     round.setDailyDouble();
-    let result = round.clues.filter(clue => round.clues[clue].dailyDouble).length;
+    let result = round.clues.filter(clue => clue.dailyDouble).length;
     expect(result).to.equal(2);
   });
 
 });
+
+
+

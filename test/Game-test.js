@@ -1,11 +1,6 @@
 const chai = require('chai');
 const expect = chai.expect;
 const Game = require('../lib/Game.js');
-const spies = require('chai-spies');
-chai.use(spies);
-
-global.domUpdates = require('../lib/domUpdates.js');
-chai.spy.on(global.domUpdates, [], () => true);
 
 describe('Game', function() {
   var game;
@@ -18,7 +13,7 @@ describe('Game', function() {
   });
 
   it('should store the current players turn, which should start at player 1', function() {
-    expect(game.playerTurn).to.equal(1);
+    expect(game.playerTurn).to.equal(0);
   });
 
   it('should store an array of category IDs, which should start as an empty array', function() {
@@ -26,13 +21,13 @@ describe('Game', function() {
   });
 
   it('should be able to choose categories by taking an object and turning it into an array of the same category IDs', function() {
-    let categoryIdsObj = { a: 1, b: 2, c:3, d: 4, e: 5};
+    let categoryIdsObj = { a: 1, b: 2, c: 3, d: 4, e: 5 };
     game.chooseCategories(categoryIdsObj);
     expect(game.categoryIds.length).to.equal(5);
   });
 
   it('should randomly sort that array', function() {
-    let categoryIdsObj = { a: 1, b: 2, c:3, d: 4, e: 5};
+    let categoryIdsObj = { a: 1, b: 2, c: 3, d: 4, e: 5 };
     let categoryIdsArray = [1, 2, 3, 4, 5];
     game.chooseCategories(categoryIdsObj);
     expect(game.categoryIds).to.not.deep.equal(categoryIdsArray);
@@ -44,15 +39,19 @@ describe('Game', function() {
   });
 
   it('should be able to change the player turn', function() {
-    game.changePlayerTurn();
-    expect(game.playerTurn).to.equal(2);
+    let players = { a: 0, b: 1, c: 2 };
+    game.changePlayerTurn(players);
+    expect(game.playerTurn).to.equal(1);
   });
 
   it('should only allow 3 players to have turns', function() {
-    game.changePlayerTurn();
-    game.changePlayerTurn();
-    game.changePlayerTurn();
-    expect(game.playerTurn).to.equal(1);
+    let players = [{ a: 0 }, { b: 1 }, { c: 2 }];
+    let currentPlayer = players[0];
+    currentPlayer = game.changePlayerTurn(players);
+    currentPlayer = game.changePlayerTurn(players);
+    currentPlayer = game.changePlayerTurn(players);
+    expect(game.playerTurn).to.equal(0);
+    expect(currentPlayer).to.deep.equal({ a: 0 });
   });
 });
 

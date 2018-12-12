@@ -136,6 +136,16 @@ h2 {
   color: #2F1C63;
 }
 
+h4 {
+  font-family: "Roboto", sans-serif;
+  color: #2F1C63;
+  margin-top: 5px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
 /*POP-UP STYLES*/
 .overlay {
   position: fixed;

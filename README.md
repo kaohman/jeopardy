@@ -1,5 +1,5 @@
 # Jeopardy - Turing Mod 2 FE Project
-A site for users to play Space Jeopardy with their friends!; Pick clues based on their values, answer correctly to increase user's score and possibly pick randomly placed Daily Doubles for a chance to wager a bet. All users wager bets and try to answer the Final Jeopardy clue in hopes to have the highest score and be declared the winner!
+A site for users to play Space Jeopardy with their friends! Pick clues based on their values, answer correctly to increase user's score and possibly pick randomly placed Daily Doubles for a chance to wager a bet. All users wager bets and try to answer the Final Jeopardy clue in hopes to have the highest score and be declared the winner!
 
 
 ### Set Up - Front-end:
@@ -23,6 +23,9 @@ Javascript
 
 ### Enhancements
 Additional enhancements will include:
+1. Set default player names
+2. Displaying correct answer if player answer is incorrect in Round 1 & 2
+3. More animation
 
 
 ### Screenshots
@@ -30,6 +33,7 @@ Additional enhancements will include:
 
 ### Original Assignment:
 Mod 2 Project from Turing School of Software & Design 
+
 http://frontend.turing.io/projects/jeopardy.html
 
 
@@ -37,9 +41,9 @@ http://frontend.turing.io/projects/jeopardy.html
 https://gist.github.com/libbyeh/c35b7a11e3301ba571d99b8be8ca889a
 
 
-### Contributors
+### Contributors:
 Karin Ohman: https://github.com/kaohman
 
-Libby Yeh: (https://github.com/libbyeh)
+Libby Yeh: https://github.com/libbyeh
 
 

@@ -12,12 +12,6 @@ Clone this repo
 Run npm install in your terminal
 
 
-### Test Driven Development:
-Jeopardy uses Mocha and Chai for testing
-
-Run with npm test from the associated root directory
-
-
 ### Background / About:
 For this project we leveraged object-oriented programming (OOP) principles to build the game, Space Jeopardy from scratch. Space Jeopardy implements array prototype methods that iterate/mutate a data-set. Space Jeopardy also leverages the principles of test-driven-development.
 
@@ -25,10 +19,15 @@ Space Jeopardy consists of three rounds with three players. Each player can subm
 
 
 ### Primary Technologies Used:
-HTML
-CSS
-Javascript
-TDD: Mocha & Chai
+ - HTML
+ - CSS
+ - Javascript
+
+
+### Test Driven Development:
+Jeopardy uses Mocha and Chai for testing
+
+Run with npm test from the associated root directory
 
 
 ### Enhancements:

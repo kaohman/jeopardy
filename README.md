@@ -30,7 +30,7 @@ Additional enhancements will include:
 
 ### Screenshots:
 ![space-jeopardy round1](assets/round1-screenshot.png)
-![space-jeopardy clue](asstes/clue-screenshot.png)
+![space-jeopardy clue](assets/clue-screenshot.png)
 
 
 ### Original Assignment:

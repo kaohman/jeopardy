@@ -1,4 +1,4 @@
-const chai = require('chai');
+const chai = require('chai');                                                                                                   
 const expect = chai.expect;
 const data = require('../lib/data-set.js');
 const Clue = require('../lib/Clue.js');
@@ -8,15 +8,15 @@ const spies = require('chai-spies');
 chai.use(spies);
 
 global.domUpdates = require('../lib/domUpdates.js');
-chai.spy.on(global.domUpdates, ['changeDisplayedScreen'], () => true);
+chai.spy.on(global.domUpdates, [ 'editClueHTML', 'changeDisplayedScreen'], () => true);
 
 describe ('Clue', function() {
   let game;
   let round;
   let clue;
   beforeEach(function() {
-  round = new Round(1);
-  clue = new Clue();
+  round = new Round(1);                                                                                                       
+  clue = new Clue();                                                  
   });
 
   it('should assign currentClue and answer', function() {
@@ -35,10 +35,15 @@ describe ('Clue', function() {
 
   it('should display the current clue', function() {
     game = new Game();
+    let cluePopUp = '';
+    let dailyDoublePopUp = '';
+    let clueMessage = '';
+    let overlay = '';
     game.chooseCategories(data.categories);
     round.setCategoryIds(game.categoryIds, data);
     round.getClues(data);
-    clue.displayCurrentClue(round, 1);
+    clue.displayCurrentClue(round, 1, cluePopUp, dailyDoublePopUp, clueMessage, overlay);
+    expect(domUpdates.editClueHTML).to.have.been.called(1);
     expect(domUpdates.changeDisplayedScreen).to.have.been.called(2)
   });
 });

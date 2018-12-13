@@ -5,7 +5,7 @@ const spies = require('chai-spies');
 chai.use(spies);
 
 global.domUpdates = require('../lib/domUpdates.js');
-chai.spy.on(global.domUpdates, ['changeScoreboard'], () => true);
+chai.spy.on(global.domUpdates, [], () => true);
 
 describe ('Player', function() {
   var player;

@@ -102,6 +102,11 @@ button {
   padding: 10px;
 }
 
+button:hover {
+  /*font-size: 22px;*/
+  box-shadow: 1px 1px 15px #01A869;
+}
+
 label {
   color: #2F1C63;
   font-family: "Roboto", sans-serif;
@@ -164,6 +169,16 @@ h4 {
   top: 50%; 
   width: 900px;
   z-index: 11;
+  animation: pop 1s 1;
+}
+
+@keyframes pop {
+  from{transform:scale(0);}
+  to{transform:scale(1);}
+}
+
+.winner-pop-up {
+  padding: 50px 100px;
 }
 
 .pop-up-buttons {
@@ -177,7 +192,6 @@ h4 {
 
 
 /*GAME PAGE*/
-
 .restart-button {
   margin: 0 0 0 20px;
   position: absolute;
@@ -234,9 +248,18 @@ li {
   text-align: center;
 }
 
-.disabled {
+.clue-box:hover {
+  font-size: 30px;
+  box-shadow: 1px 1px 15px #01A869;
+  background: linear-gradient(to bottom right, #FEA99F, #57315c);
+}
+
+.disabled,
+.disabled:hover {
   font-size: 0px;
-  background: linear-gradient(#57315c, #57315c);
+  background: linear-gradient(rgba(34, 35, 66, 0.7), rgba(34, 35, 66, 0.7));
+  filter: none;
+  box-shadow: none;
 }
 
 .categories {
@@ -253,7 +276,7 @@ li {
 }
 
 .scoreboard {
-  background-color: rgb(34, 35, 66, 0.7);
+  background-color: rgba(34, 35, 66, 0.7);
   border-radius: 20px;
   display: flex;
   flex-direction: row;
@@ -281,6 +304,32 @@ h3 {
   color: lightgrey;
   font-size: 30px;
   margin: 0 0 10px 0;
+}
+
+.win-images {
+  position: absolute;
+}
+
+.cat-1 {
+  top: 100px;
+  left: 760px;
+}
+
+.cat-2 {
+  top: 160px;
+  left: -260px;
+  height: 300px;
+}
+
+.pizza {
+  left: -230px;
+  height: 300px;
+}
+
+.taco {
+  top: 260px;
+  left: 800px;
+  height: 300px;
 }
 
 .avatar {

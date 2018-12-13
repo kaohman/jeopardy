@@ -11,7 +11,7 @@ const spies = require('chai-spies');
 chai.use(spies);
 
 global.domUpdates = require('../lib/domUpdates.js');
-chai.spy.on(global.domUpdates, ['displayMessage', 'hideMessage', 'updateWagerMessage', 'changeDisplayedScreen', 'editClueHTML'], () => true);
+chai.spy.on(global.domUpdates, ['displayMessage', 'hideMessage', 'updateWagerMessage', 'changeDisplayedScreen', 'editClueHTML', 'displayWinnerName'], () => true);
 
 describe ('FinalRound', function() {
   var round;
@@ -62,12 +62,25 @@ describe ('FinalRound', function() {
   });
 
   it('should display the final clue', function() {
+    clue = new Clue();
     round.getClues(data);
     round.getSingleClue();
     round.displayFinalClue('', '', '');
+    expect(domUpdates.editClueHTML).to.have.been.called(1);
+    expect(domUpdates.changeDisplayedScreen).to.have.been.called(2);
+  });
 
+  it('should display the winner', function() {
+    let player1 = new Player();
+    player1.score = 5;
+    let player2 = new Player();
+    player2.score = 10;
+    let player3 = new Player();
+    player3.score = 15;
+    let players = [ player1, player2, player3 ];
 
-
+    expect(domUpdates.displayWinnerName).to.have.been.called(1);
+    expect(domUpdates.changeDisplayedScreen).to.have.been.called(2);
   });
 
 });

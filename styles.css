@@ -5,7 +5,7 @@
         right: 0px;
     }
     to {
-        right: calc( 100% + 100px );
+        right: calc( 100% + 200px );
     }
 }
 
@@ -15,61 +15,59 @@
         left: 0px;
     }
     to {
-        left: calc( 100% + 100px );
+        left: calc( 100% + 200px );
     }
 }
 
 .stars1 {
+  animation-name: starsAnimation1;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  background-color: white;
+  height: 2px;
   position:fixed;
   right: 0px;
   top: 50px;
   width: 2px;
-  height: 2px;
-  background-color: white;
-  position: fixed;
-  animation-name: starsAnimation1;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
 }
 
 .stars1:before {
-  position: absolute;
-  display: block;
+  background: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(355,355,355,0.7) 100%); 
   content: "";
-  width: 200px;
+  display: block;
+  position: absolute;
+  height: 2px;
   left: 1px;
   top: 0px;
-  height: 2px;
-  background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(355,355,355,0.7) 100%); 
+  width: 200px;
 }
 
 .stars2 {
-  position:fixed;
+  animation-name: starsAnimation2 ;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  background-color: white;
+  height: 2px;
   left: 0px;
+  position:fixed;
   top: 50px;
   width: 2px;
-  height: 2px;
-  background-color: white;
-  position: fixed;
-  animation-name: starsAnimation2 ;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
 }
 
 .stars2:before {
-  position: absolute;
-  display: block;
+  background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(355,355,355,0.7) 100%); 
   content: "";
-  width: 200px;
+  display: block;
+  height: 2px;
+  position: absolute;
   right: 1px;
   top: 0px;
-  height: 2px;
-  background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(355,355,355,0.7) 100%); 
+  width: 200px;
 }
 
 .star-1 {
   animation-duration:10s;
-  top: 20%;
+  top: 18%;
 }
 .star-2 {
   animation-duration:15s;
@@ -77,12 +75,7 @@
 }
 .star-3 {
   animation-duration:19s;
-  top: 60%;
-}
-
-.star-4{
-  animation-duration:12s;
-  top:90%;
+  top: 90%;
 }
 
 
